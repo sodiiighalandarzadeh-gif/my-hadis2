@@ -1,0 +1,16 @@
+@font-face {
+    font-family:"myfontbnazanin";
+    src: url(Font/BNazanin.ttf);
+}
+
+
+
+body{
+    direction: rtl;
+    font-family:"myfontbnazanin";
+}
+
+#divBanner{
+    background-color:palegreen;
+    text-align: center;
+}

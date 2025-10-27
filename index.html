@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>علاقه‌مندی‌های من</title>
+  <link rel="stylesheet" href="cssstyle/bootstrap/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Vazir', sans-serif;
+      background: linear-gradient(to right, #fef6e4, #e8f0fe);
+      color: #4a4a4a;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* بنر متحرک */
+    #divBanner {
+      padding: 40px;
+      text-align: center;
+      background: linear-gradient(270deg, #ffb6b9, #fae3d9, #bbded6, #8ac6d1);
+      background-size: 800% 800%;
+      animation: gradientShift 15s ease infinite;
+      color: white;
+    }
+
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    /* منوی شیشه‌ای */
+    .navbar {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.6) !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .navbar-brand, .nav-link {
+      color: #4a4a4a !important;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #ff6f61 !important;
+    }
+
+    /* دکمه تغییر تم */
+    #toggleTheme {
+      margin: 20px auto;
+      display: block;
+    }
+
+    /* بخش‌ها */
+    .section-title {
+      margin-top: 80px;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #6d6875;
+      text-align: center;
+    }
+
+    .media-grid img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .media-grid img:hover {
+      transform: scale(1.03);
+    }
+
+    .media-grid video {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    audio {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .spacer {
+      margin-top: 80px;
+    }
+
+    footer {
+      background-color: #ffb6b9;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 80px;
+      font-size: 0.9rem;
+    }
+
+    /* حالت شب */
+    .dark-mode {
+      background-color: #2e2e2e !important;
+      color: #fefefe !important;
+    }
+
+    .dark-mode .section-title {
+      color: #ffd6a5 !important;
+    }
+
+    .dark-mode footer {
+      background-color: #444 !important;
+      color: #fff !important;
+    }
+
+    .dark-mode .navbar {
+      background-color: rgba(30, 30, 30, 0.6) !important;
+    }
+
+    .dark-mode .nav-link,
+    .dark-mode .navbar-brand {
+      color: #fefefe !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- بنر -->
+  <div id="divBanner">
+    <h1>علاقه‌مندی‌های من</h1>
+  </div>
+
+  <!-- منو -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">خانه</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#books">کتاب‌ها</a></li>
+          <li class="nav-item"><a class="nav-link" href="#videos">فیلم‌ها</a></li>
+          <li class="nav-item"><a class="nav-link" href="#music">موسیقی‌ها</a></li>
+          <li class="nav-item"><a class="nav-link" href="#company">شرکت تهیه‌کننده</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- دکمه تغییر تم -->
+  <button id="toggleTheme" class="btn btn-outline-secondary">🌓 تغییر حالت شب/روز</button>
+
+  <div class="container">
+    <!-- کتاب‌ها -->
+    <div id="books" class="section-title">📚 کتاب‌ها</div>
+    <div class="row media-grid px-3">
+      <div class="col-md-4"><img src="image/1.png" alt="کتاب ۱"></div>
+      <div class="col-md-4"><img src="image/2.png" alt="کتاب ۲"></div>
+      <div class="col-md-4"><img src="image/3.png" alt="کتاب ۳"></div>
+    </div>
+
+    <!-- فاصله -->
+    <div class="spacer"></div>
+
+    <!-- فیلم‌ها -->
+    <div id="videos" class="section-title">🎬 فیلم‌ها</div>
+    <div class="row media-grid px-3">
+      <div class="col-md-6"><video controls src="video/1.mp4"></video></div>
+      <div class="col-md-6"><video controls src="video/2.mp4"></video></div>
+    </div>
+
+    <!-- فاصله -->
+    <div class="spacer"></div>
+
+    <!-- موسیقی‌ها -->
+    <div id="music" class="section-title">🎵 موسیقی‌ها</div>
+    <div class="row px-3">
+      <div class="col-md-6"><audio controls src="audio/1.mp3"></audio></div>
+      <div class="col-md-6"><audio controls src="audio/2.mp3"></audio></div>
+    </div>
+
+    <!-- فاصله -->
+    <div class="spacer"></div>
+
+    <!-- شرکت تهیه‌کننده -->
+    <div id="company" class="section-title">🏢 شرکت تهیه‌کننده</div>
+    <p class="text-center">این سایت برای نمایش علاقه‌مندی‌های من طراحی شده است. امیدوارم از دیدن و شنیدن آن‌ها لذت ببرید!</p>
+  </div>
+
+  <!-- فوتر -->
+  <footer>
+    <p>©️ 2025 علاقه‌مندی‌های من | طراحی شده با ❤️ توسط من</p>
+  </footer>
+
+  <script src="cssstyle/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("toggleTheme").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>
+
+
+
